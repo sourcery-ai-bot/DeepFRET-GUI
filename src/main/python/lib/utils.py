@@ -194,11 +194,11 @@ def sim_to_ascii(df, trace_len, outdir):
         ).round(4)
 
         date_txt = "Date: {}".format(time.strftime("%Y-%m-%d, %H:%M"))
-        vid_txt = "Video filename: {}".format(None)
         id_txt = "FRET pair #{}".format(idx)
         bl_txt = "Bleaches at {}".format(trace["fb"].values[0])
 
         with open(path, "w") as f:
+            vid_txt = "Video filename: {}".format(None)
             f.write(
                 "{0}\n"
                 "{1}\n"

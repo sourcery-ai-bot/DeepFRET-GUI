@@ -369,7 +369,7 @@ class TraceWindow(BaseWindow):
         else:
             traces = [trace for trace in self.data.traces.values()]
 
-        if len(traces) > 0:
+        if traces:
             batch_size = 256
             batches = (len(traces) // batch_size) + 1
             progressbar = ProgressBar(loop_len=batches, parent=self)
